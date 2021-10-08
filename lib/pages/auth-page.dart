@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sign_up_auth/pages/login-page.dart';
 
 class AuthNavigationPage extends StatefulWidget {
   AuthNavigationPage({Key key}) : super(key: key);
@@ -19,8 +20,8 @@ class _AuthNavigationPageState extends State<AuthNavigationPage> {
           height: height,
           width: double.infinity,
           padding: EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 30,
+            horizontal: 30,
+            vertical: 50,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,7 +66,14 @@ class _AuthNavigationPageState extends State<AuthNavigationPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => LogInPage(),
+                        ),
+                      );
+                    },
                     height: 60,
                     minWidth: double.infinity,
                     elevation: 0.0,
